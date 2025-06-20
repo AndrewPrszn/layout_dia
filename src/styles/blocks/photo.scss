@@ -1,0 +1,130 @@
+@import '../utils/mixins';
+
+.photo-slider-grid {
+  margin-left: -20px;
+  margin-right: -20px;
+  grid-column: 1 / -1;
+
+  @include on-tablet {
+    grid-column: 1 / -1;
+    margin-inline: -41px;
+    width: calc(100% + 81px);
+  }
+
+  @include on-small-desktop {
+    grid-column: 7 / 13;
+    grid-row: 1 / span 3;
+    height: 690px;
+    margin-inline: -54px;
+    width: calc(100% + 118px);
+  }
+
+  @include on-medium-desktop {
+    grid-column: 10 / 13;
+    margin-inline: -227px;
+    width: calc(100% + 470px);
+  }
+
+  @include my-desktop-size-min-with {
+    grid-column: 9 / 13;
+    grid-row: 1 / span 3;
+    height: 690px;
+    margin-inline: -230px;
+    width: calc(100% + 680px);
+  }
+
+  @include on-large-desktop {
+    width: calc(100% + 890px);
+  }
+}
+
+.photo-slider-wrapper {
+  grid-row: 3 / 4;
+  width: auto;
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-top: 10px;
+
+  @include on-small-desktop {
+    grid-column: 6 / 13;
+  }
+
+  @include on-small-desktop {
+    height: 680px;
+  }
+}
+
+.photo-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  img.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  .slider-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    z-index: 10;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+
+  .slider-button {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+
+    img {
+      width: 5.5px !important;
+      height: 9px !important;
+      display: block !important;
+      position: relative !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .photo-slider .slider-controls {
+    left: 15px;
+    bottom: 15px;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
