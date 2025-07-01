@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  class="page"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -41,8 +44,9 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <div class="container">
-        <div class="header__content">
+      <div class="header__content">
+        <!-- Контейнер лише для тексту, логотипу, меню -->
+        <div class="container">
           <div class="top__bar">
             <div class="top__bar__left">
               <a
@@ -55,14 +59,15 @@
                   class="top__bar__logo"
                 />
               </a>
+
               <div class="top__bar__icons">
                 <a
-                  href="#menu"
+                  href="#"
                   class="icon icon--menu"
+                  id="menuOpen"
                 ></a>
               </div>
 
-              <!-- Навігація теж сюди, щоб все було в одному рядку -->
               <nav class="nav top__nav">
                 <ul class="nav__list">
                   <li class="nav__item">
@@ -119,8 +124,68 @@
             </div>
           </div>
 
-          <!-- HEADER BOTTOM -->
-          <div class="header__bottom">
+          <aside
+            class="menu page__menus"
+            id="menu"
+          >
+            <div class="container">
+              <div class="top-bar menu__top">
+                <a
+                  href="#"
+                  class="top__bar__logo-link"
+                >
+                  <img
+                    src="./images/air-logo.png"
+                    alt="Dia"
+                    class="top__bar__logo"
+                  />
+                </a>
+                <a
+                  href="#"
+                  class="icon icon--close"
+                  id="menuClose"
+                ></a>
+              </div>
+            </div>
+
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a
+                  href="#About"
+                  class="nav__link"
+                >
+                  About us
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="#Services"
+                  class="nav__link"
+                >
+                  Services
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="#Testimonials"
+                  class="nav__link"
+                >
+                  Testimonials
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="#Contacts"
+                  class="nav__link"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="header__bottom">
+          <div class="header__left">
             <h1 class="header__tittle">Strategic Agency</h1>
             <p class="header__product">
               We believe in the power of bold ideas that can solve business
@@ -134,52 +199,51 @@
                 <div class="button__tittle">Learn more</div>
               </a>
             </div>
-            <div class="photo-slider-grid">
-              <div class="photo-slider-wrapper">
-                <div class="photo-slider">
-                  <img
-                    src="./images/slide-1.png"
-                    alt="Slide 1"
-                    class="slide active"
-                  />
-                  <img
-                    src="./images/slide-2.png"
-                    alt="Slide 2"
-                    class="slide"
-                  />
-                  <img
-                    src="./images/slide-3.png"
-                    alt="Slide 3"
-                    class="slide"
-                  />
+          </div>
+          <div class="header__right">
+            <div class="photo-slider">
+              <img
+                src="./images/slide-1.png"
+                alt="Slide 1"
+                class="slide active"
+              />
+              <img
+                src="./images/slide-2.png"
+                alt="Slide 2"
+                class="slide"
+              />
+              <img
+                src="./images/slide-3.png"
+                alt="Slide 3"
+                class="slide"
+              />
 
-                  <div class="slider-controls">
-                    <div class="buttons-wrapper">
-                      <button class="slider-button prev-button">
-                        <img
-                          src="./icons/left.png"
-                          alt="Previous"
-                        />
-                      </button>
-                      <button class="slider-button next-button">
-                        <img
-                          src="./icons/right.png"
-                          alt="Next"
-                        />
-                      </button>
-                    </div>
-                    <h2 class="button__h2">Intro</h2>
-                    <p class="button__tittles">
-                      By the same illusion which lifts the horizon.
-                    </p>
-                  </div>
+              <div class="slider-controls">
+                <div class="buttons-wrapper">
+                  <button class="slider-button prev-button">
+                    <img
+                      src="./icons/left.png"
+                      alt="Previous"
+                    />
+                  </button>
+                  <button class="slider-button next-button">
+                    <img
+                      src="./icons/right.png"
+                      alt="Next"
+                    />
+                  </button>
                 </div>
+                <h2 class="button__h2">Intro</h2>
+                <p class="button__tittles">
+                  By the same illusion which lifts the horizon.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+
     <main class="main">
       <div class="container">
         <div class="main__content">
@@ -243,7 +307,10 @@
         </div>
       </div>
       <div class="container">
-        <div class="servises__pages">
+        <div
+          class="servises__pages"
+          id="Services"
+        >
           <div class="servises__grid">
             <div class="servises__top__tittle">
               <div class="about__pages">Services</div>
@@ -371,7 +438,10 @@
         </div>
       </div>
       <div class="container">
-        <div class="testmonials">
+        <div
+          class="testmonials"
+          id="Testimonials"
+        >
           <div class="testmonials__grid">
             <div class="testmonials__top__tittle">
               <div class="testmonials__pages">Testimonials</div>
@@ -497,30 +567,42 @@
       </div>
       <div class="contact">
         <div class="container">
-          <div class="contact__content">
+          <div
+            class="contact__content"
+            id="Contacts"
+          >
             <h1 class="contact__tittle">Send us a message</h1>
-            <form class="contact__form">
+            <form
+              class="contact__form"
+              onsubmit="this.reset(); return false;"
+            >
               <input
-                type="text"
+                name="email"
+                type="email"
                 class="contact__input"
                 placeholder="Your Email"
                 required
               />
               <input
-                type="email"
+                name="name"
+                type="text"
                 class="contact__input"
                 placeholder="Your Name"
                 required
               />
               <input
+                name="message"
                 class="contact__input"
                 placeholder="Your message"
                 required
               />
+              <button
+                type="submit"
+                class="contact__button"
+              >
+                <div class="contact__button__tittle">Send</div>
+              </button>
             </form>
-            <div class="contact__button">
-              <div class="contact__button__tittle">Send</div>
-            </div>
             <h1 class="contact__info__tittle">Contact us</h1>
             <div class="contact__call">
               <div class="contact__about">Call us</div>
@@ -580,7 +662,7 @@
                 </li>
                 <li class="contact__item">
                   <a
-                    href="#Home"
+                    href="#"
                     class="contact__link"
                   >
                     Home
@@ -588,7 +670,7 @@
                 </li>
                 <li class="contact__item">
                   <a
-                    href="#Work"
+                    href="#About"
                     class="contact__link"
                   >
                     Work
@@ -636,6 +718,51 @@
       nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % slides.length;
         showSlide(currentIndex);
+      });
+
+      const menu = document.getElementById('menu');
+      const openBtn = document.getElementById('menuOpen');
+      const closeBtn = document.getElementById('menuClose');
+      const body = document.body;
+
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        menu.classList.add('active');
+        body.classList.add('no-scroll');
+      });
+
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        menu.classList.remove('active');
+        body.classList.remove('no-scroll');
+      });
+
+      // Закриття меню при кліку на посилання
+      document.querySelectorAll('.page__menus a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          // Дозволяємо переходу по якорю
+          const targetId = link.getAttribute('href');
+          const target = document.querySelector(targetId);
+
+          // Закриваємо меню та відновлюємо скрол
+          menu.classList.remove('active');
+          body.classList.remove('no-scroll');
+
+          // Явно очищаємо стиль, бо іноді iOS кешує overflow:hidden
+          document.body.style.overflow = 'auto';
+          document.documentElement.style.overflow = 'auto';
+
+          // Додаємо скрол вручну (опціонально, але стабільно)
+          if (target) {
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+              // Останній захист: ще раз очищаємо overflow після DOM repaint
+              document.body.style.overflow = '';
+              document.documentElement.style.overflow = '';
+            }, 50);
+          }
+        });
       });
     </script>
   </body>

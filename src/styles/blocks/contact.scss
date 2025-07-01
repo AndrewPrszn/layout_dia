@@ -30,6 +30,7 @@
     }
   }
   &__form {
+    display: grid;
     grid-column: 1 / -1;
 
     @include on-small-desktop {
@@ -53,7 +54,10 @@
     font-size: 15px;
     line-height: 100%;
 
+    grid-column: 1 / 1;
+
     @include on-small-desktop {
+      grid-column: 1 / 6;
       margin-bottom: 50px;
     }
 
@@ -78,9 +82,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: none;
 
     @include on-small-desktop {
-      grid-column: 1 / 4;
+      grid-column: 1 / 5;
     }
 
     &:hover {
@@ -302,4 +307,11 @@
     font-size: 24px;
     line-height: 150%;
   }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #fff; // ваш колір тексту
+  box-shadow: 0 0 0 1000px #2c2c2c inset; // заливаємо тим самим bg, що й поля
 }
