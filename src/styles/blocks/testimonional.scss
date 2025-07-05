@@ -6,6 +6,10 @@
 
   &__grid {
     @include page-grid;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
   }
   &__top__tittle {
     grid-column: 1 / -1;
@@ -36,13 +40,17 @@
   &__card__two,
   &__card__three {
     background-color: #fff;
-    width: 280px;
     height: 450px;
     border-radius: 16px;
     margin-bottom: 16px;
   }
   &__card__one {
     grid-column: 1 / -1;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
 
     @include on-tablet {
       place-items: center;
@@ -66,6 +74,11 @@
   }
   &__card__two {
     grid-column: 1 / -1;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
 
     @include on-tablet {
       place-items: center;
@@ -90,6 +103,11 @@
   }
   &__card__three {
     grid-column: 1 / -1;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
 
     @include on-tablet {
       place-items: center;
@@ -172,11 +190,14 @@
 
 .avatar {
   &__wrapper {
-    margin: 32px 42px 24px;
-    overflow: visible;
     position: relative;
-    width: 196px;
-    height: 196px;
+    width: 100%;
+    max-width: 250px; // обмеження по ширині
+    aspect-ratio: 1 / 1; // квадрат
+    margin: 0 auto 24px; // центрування по горизонталі
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include on-tablet {
       width: 250px;
@@ -197,9 +218,8 @@
     }
   }
   &__shape--top {
-    top: 5px;
-    left: -15px;
-    transform: rotate(1deg);
+    top: 30px; // раніше було 5px
+    left: 15px; // раніше -15px
 
     @include on-tablet {
       top: 15px;
@@ -207,9 +227,9 @@
     }
   }
   &__shape--bottom {
-    bottom: 0;
-    right: -10px;
-    transform: rotate(1deg);
+    bottom: 30px; // було 0
+    right: 15px; // було -10px
+    transform: rotate(2deg);
 
     @include on-tablet {
       right: -20px;

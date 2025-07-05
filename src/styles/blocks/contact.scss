@@ -4,7 +4,6 @@
   background-color: #2c2c2c;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  margin-top: 120px;
 
   &__content {
     @include page-grid;
@@ -171,8 +170,8 @@
 
     @include on-small-desktop {
       grid-column: 7 / 12;
-      grid-row: 3;
-      margin-top: -5px;
+      grid-row: 2;
+      margin-top: 250px;
     }
 
     @include on-medium-desktop {

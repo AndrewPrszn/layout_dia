@@ -51,11 +51,11 @@
   &__block-first {
     grid-column: 1 / -1;
 
-    margin-top: 48px;
-    margin-bottom: 24px;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     height: 264px;
     border-radius: 16px;
+    margin: 48px auto 24px;
 
     @include on-tablet {
       margin-left: 20px;
@@ -78,10 +78,11 @@
   &__block-second {
     grid-column: 1 / -1;
 
-    margin-bottom: 24px;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     height: 264px;
     border-radius: 16px;
+    margin: 25px auto 24px;
 
     @include on-tablet {
       max-width: 264px;
@@ -95,6 +96,7 @@
       margin-top: 10px;
       grid-column: 10 / 13;
       grid-row: 1;
+      margin-left: 20px;
     }
 
     background-color: #fff;
@@ -102,10 +104,11 @@
   &__block-third {
     grid-column: 1 / -1;
 
-    margin-bottom: 24px;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     height: 264px;
     border-radius: 16px;
+    margin: 25px auto 24px;
 
     @include on-tablet {
       max-width: 264px;
@@ -126,9 +129,11 @@
   }
   &__block-fourth {
     grid-column: 1 / -1;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     height: 264px;
     border-radius: 16px;
+    margin: 25px auto 0;
 
     @include on-tablet {
       max-width: 264px;
@@ -141,6 +146,7 @@
       max-width: 250px;
       grid-column: 10 / 13;
       grid-row: 2;
+      margin-left: 20px;
     }
 
     background-color: #fff;
